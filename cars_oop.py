@@ -1,4 +1,3 @@
-a = 1
 colors = ['red','orange','yellow','green','cyan','blue','violet','brown','grey','white','black','purple']
 car = ["null"]
 car_num_last = 0
@@ -20,7 +19,11 @@ class Car:
         self.headlights = headlights
         self.brand = brand
 
-while true:
+print("Welcome to Vehicle Data Base!\nThere are some commands that will help you to\nuse the program easier:\n")
+print("Creating car: New car\nEditing car: Edit car, Stop edit, \nSet colour, Switch headlights,\nSwitch doors, Car profile.")
+print("Deleting car: Delete car.")
+
+while True:
     vvod = str(input())
     if vvod[:8] == 'New car':
         print("Enter car brand:")
@@ -37,7 +40,7 @@ while true:
             edit = str(input())
             while edit != "Stop edit":
                 if edit[:11] == "Set colour":
-                    print("Enter colour: ")
+                    print("Enter colour:")
                     car_colour = str(input())
                     if car_colour in colors:
                         car[car_num].color = car_colour
